@@ -1,0 +1,42 @@
+﻿[
+  {
+    "WorkflowName": "test_case_1_workflow",
+    "WorkflowsToInject": [],
+    "RuleExpressionType": 0,
+    "GlobalParams": [],
+    "Rules": [
+      {
+        "RuleName": "GiveDiscount10",
+        "SuccessEvent": "10",
+        "ErrorMessage": "You are not Gloria, lol",
+        "ErrorType": "Error",
+        "RuleExpressionType": 0,
+        "Expression": "input1.FirstName == \"Gloria\" AND input1.LastName == \"Schneider\""
+      },
+      {
+        "RuleName": "GiveDiscount20",
+        "SuccessEvent": "20",
+        "ErrorMessage": "You are not Charley, lol",
+        "ErrorType": "Error",
+        "RuleExpressionType": 0,
+        "Expression": "input1.FirstName == \"Charley\" AND input1.LastName == \"Stokes\""
+      },
+      {
+        "RuleName": "GiveDiscount30",
+        "SuccessEvent": "30",
+        "ErrorMessage": "You are not Estel, lol",
+        "ErrorType": "Error",
+        "RuleExpressionType": 0,
+        "Expression": "input1.FirstName == \"Estel\" AND input1.LastName == \"Mante\""
+      },
+      {
+        "RuleName": "GiveDiscount40",
+        "SuccessEvent": "40",
+        "ErrorMessage": "You don't have at least 2 addresses",
+        "ErrorType": "Error",
+        "RuleExpressionType": 0,
+        "Expression": "input1.Addresses.Count > 2"
+      }
+    ]
+  }
+]

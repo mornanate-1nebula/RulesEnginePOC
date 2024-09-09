@@ -1,0 +1,26 @@
+﻿[
+  {
+    "WorkflowName": "test_case_2_workflow",
+    "WorkflowsToInject": [],
+    "RuleExpressionType": 0,
+    "GlobalParams": [],
+    "Rules": [
+      {
+        "RuleName": "GiveDiscount10",
+        "SuccessEvent": "10",
+        "ErrorMessage": "You don't have at least 2 Addresses",
+        "ErrorType": "Error",
+        "RuleExpressionType": 0,
+        "Expression": "input1.Any(_ => _.Addresses.Any(__ => __.City == \"Lake Westleyside\"))"
+      },
+      {
+        "RuleName": "GiveDiscount20",
+        "SuccessEvent": "20",
+        "ErrorMessage": "You don't have a very special person in your list",
+        "ErrorType": "Error",
+        "RuleExpressionType": 0,
+        "Expression": "input1.Any(_ => _.FirstName == \"THIS_DOES_NOT_EXIST\")"
+      }
+    ]
+  }
+]
